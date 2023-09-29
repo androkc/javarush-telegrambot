@@ -4,20 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dd88b4c-f013-46a0-bdee-cb885565ead5" name="Changes" comment="JRTB-0: Init project" />
+    <list default="true" id="4dd88b4c-f013-46a0-bdee-cb885565ead5" name="Changes" comment="JRTB-2: Added stub telegram bot to the project">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/RELEASE_NOTES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;androkc&quot;
+  }
+}</component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
@@ -25,11 +48,26 @@
       </list>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="25b24506-7bf8-4ddb-b1a6-82a67a416ba4" />
+        <option name="url" value="https://github.com/androkc/javarush-telegrambot" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/JavarushTelegramBotApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -48,8 +86,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "JRTB-2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/sanya/Downloads/javarush-telegrambot/javarush-telegrambot",
     "node.js.detected.package.eslint": "true",
@@ -60,7 +99,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +137,8 @@
       <workItem from="1695814165801" duration="254000" />
       <workItem from="1695814439278" duration="253000" />
       <workItem from="1695814714303" duration="133000" />
-      <workItem from="1695814879675" duration="316000" />
+      <workItem from="1695814879675" duration="7838000" />
+      <workItem from="1695977643103" duration="5723000" />
     </task>
     <task id="LOCAL-00001" summary="JRTB-0">
       <option name="closed" value="true" />
@@ -116,7 +156,47 @@
       <option name="project" value="LOCAL" />
       <updated>1695815139216</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="JRTB-0: Init project">
+      <option name="closed" value="true" />
+      <created>1695815321965</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695815321965</updated>
+    </task>
+    <task id="LOCAL-00004" summary="JRTB-0: Init project">
+      <option name="closed" value="true" />
+      <created>1695913241815</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695913241815</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JRTB-2: Init project">
+      <option name="closed" value="true" />
+      <created>1695913330853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695913330853</updated>
+    </task>
+    <task id="LOCAL-00006" summary="JRTB-2: Init project">
+      <option name="closed" value="true" />
+      <created>1695913553538</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695913553538</updated>
+    </task>
+    <task id="LOCAL-00007" summary="JRTB-2: Added stub telegram bot to the project">
+      <option name="closed" value="true" />
+      <created>1695990365398</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695990365398</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +249,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JRTB-0" />
     <MESSAGE value="JRTB-0: Init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="JRTB-0: Init project" />
+    <MESSAGE value="JRTB-2: Init project" />
+    <MESSAGE value="JRTB-2: Added stub telegram bot to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="JRTB-2: Added stub telegram bot to the project" />
   </component>
 </project>
