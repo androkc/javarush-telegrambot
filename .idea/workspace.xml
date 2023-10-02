@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dd88b4c-f013-46a0-bdee-cb885565ead5" name="Changes" comment="JRTB-2: Added stub telegram bot to the project">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/RELEASE_NOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/CommandContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/CommandNameEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/HelpCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/NoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/StartCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/StopCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/UnknownCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/service/SendBotMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/service/SendBotMessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/AbstractCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/CommandContainerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/HelpCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/NoCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/StartCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/StopCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/service/SendBotMessageServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/bot/JavarushTelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/bot/JavarushTelegramBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -88,7 +103,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "JRTB-2",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "JRTB-3",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/sanya/Downloads/javarush-telegrambot/javarush-telegrambot",
     "node.js.detected.package.eslint": "true",
@@ -110,8 +127,90 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sanya\Downloads\javarush-telegrambot\javarush-telegrambot" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.javarushcommunity.jrtb.command" />
+      <recent name="com.github.javarushcommunity.jrtb.service" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UnknownCommandTest">
+    <configuration name="HelpCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javarush-telegrambot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.javarushcommunity.jrtb.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.javarushcommunity.jrtb.command" />
+      <option name="MAIN_CLASS_NAME" value="com.github.javarushcommunity.jrtb.command.HelpCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javarush-telegrambot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.javarushcommunity.jrtb.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.javarushcommunity.jrtb.command" />
+      <option name="MAIN_CLASS_NAME" value="com.github.javarushcommunity.jrtb.command.NoCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javarush-telegrambot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.javarushcommunity.jrtb.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.javarushcommunity.jrtb.command" />
+      <option name="MAIN_CLASS_NAME" value="com.github.javarushcommunity.jrtb.command.StartCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StopCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javarush-telegrambot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.javarushcommunity.jrtb.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.javarushcommunity.jrtb.command" />
+      <option name="MAIN_CLASS_NAME" value="com.github.javarushcommunity.jrtb.command.StopCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnknownCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javarush-telegrambot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.javarushcommunity.jrtb.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.javarushcommunity.jrtb.command" />
+      <option name="MAIN_CLASS_NAME" value="com.github.javarushcommunity.jrtb.command.UnknownCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavarushTelegramBotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="javarush-telegrambot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.javarushcommunity.jrtb.JavarushTelegramBotApplication" />
@@ -119,6 +218,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UnknownCommandTest" />
+        <item itemvalue="JUnit.StopCommandTest" />
+        <item itemvalue="JUnit.StartCommandTest" />
+        <item itemvalue="JUnit.NoCommandTest" />
+        <item itemvalue="JUnit.HelpCommandTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -139,6 +247,7 @@
       <workItem from="1695814714303" duration="133000" />
       <workItem from="1695814879675" duration="7838000" />
       <workItem from="1695977643103" duration="5723000" />
+      <workItem from="1695996379361" duration="9531000" />
     </task>
     <task id="LOCAL-00001" summary="JRTB-0">
       <option name="closed" value="true" />
@@ -196,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695990365398</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="JRTB-3: little commit">
+      <option name="closed" value="true" />
+      <created>1695996521934</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695996521934</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +368,7 @@
     <MESSAGE value="JRTB-0: Init project" />
     <MESSAGE value="JRTB-2: Init project" />
     <MESSAGE value="JRTB-2: Added stub telegram bot to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="JRTB-2: Added stub telegram bot to the project" />
+    <MESSAGE value="JRTB-3: little commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="JRTB-3: little commit" />
   </component>
 </project>
