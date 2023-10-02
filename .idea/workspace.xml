@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dd88b4c-f013-46a0-bdee-cb885565ead5" name="Changes" comment="JRTB-2: Added stub telegram bot to the project">
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/start.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/CommandContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/CommandNameEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/NoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/StartCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/StopCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/command/UnknownCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/service/SendBotMessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/service/SendBotMessageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/AbstractCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/CommandContainerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/HelpCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/NoCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/StartCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/command/StopCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/src/test/java/com/github/javarushcommunity/jrtb/service/SendBotMessageServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/bot/JavarushTelegramBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/javarush-telegrambot/src/main/java/com/github/javarushcommunity/jrtb/bot/JavarushTelegramBot.java" afterDir="false" />
-    </list>
+    <list default="true" id="4dd88b4c-f013-46a0-bdee-cb885565ead5" name="Changes" comment="JRTB-2: Added stub telegram bot to the project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,10 +82,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "STEP__4__JRTB-13",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "JRTB-3",
+    "git-widget-placeholder": "STEP__4__JRTB-13",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/sanya/Downloads/javarush-telegrambot/javarush-telegrambot",
     "node.js.detected.package.eslint": "true",
