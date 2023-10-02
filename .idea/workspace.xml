@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dd88b4c-f013-46a0-bdee-cb885565ead5" name="Changes" comment="JRTB-2: Added stub telegram bot to the project">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/RELEASE_NOTES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/javarush-telegrambot/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javarush-telegrambot/start.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="main_draft" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +83,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "JRTB-2",
+    "git-widget-placeholder": "STEP__4__JRTB-13",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/sanya/Downloads/javarush-telegrambot/javarush-telegrambot",
     "node.js.detected.package.eslint": "true",
