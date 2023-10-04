@@ -12,3 +12,7 @@
 ## 0.3.0-SNAPSHOT
 
 *   JRTB-13: added deployment process to the project
+
+## 0.4.0-SNAPSHOT
+
+*   JRTB-1: added repository layer.
