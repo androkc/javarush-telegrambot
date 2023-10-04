@@ -1,18 +1,33 @@
 package com.github.javarushcommunity.jrtb.command;
 
+import com.github.javarushcommunity.jrtb.repository.entity.TelegramUser;
 import com.github.javarushcommunity.jrtb.service.SendBotMessageService;
+import com.github.javarushcommunity.jrtb.service.TelegramUserService;
 import lombok.AllArgsConstructor;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 @AllArgsConstructor
 public class StartCommand implements Command {
     private final SendBotMessageService sendBotMessageService;
+    private final TelegramUserService telegramUserService;
     public final static String START_MESSAGE = "Привет. Я Javarush Telegram Bot. Я помогу тебе быть в курсе последних " +
-                                                    "статей тех авторов, котрые тебе интересны. Я еще маленький и только учусь.";
+            "статей тех авторов, котрые тебе интересны. Я еще маленький и только учусь.";
 
 
     @Override
     public void execute(Update update) {
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), START_MESSAGE);
+        String chatId = update.getMessage().getChatId().toString();
+
+        telegramUserService.findByChatId(chatId).ifPresentOrElse(
+                user -> {
+                    user.setActive(true);
+                    telegramUserService.save(user);
+                }, () -> {
+                    TelegramUser telegramUser = new TelegramUser();
+                    telegramUser.setActive(true);
+                    telegramUser.setChatId(chatId);
+                    telegramUserService.save(telegramUser);
+                });
+        sendBotMessageService.sendMessage(chatId, START_MESSAGE);
     }
 }

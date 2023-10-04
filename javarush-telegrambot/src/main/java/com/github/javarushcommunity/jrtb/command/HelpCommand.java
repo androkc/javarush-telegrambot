@@ -7,9 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import static com.github.javarushcommunity.jrtb.command.CommandNameEnum.*;
 
 @AllArgsConstructor
-public class HelpCommand implements Command{
+public class HelpCommand implements Command {
     private final SendBotMessageService sendBotMessageService;
-    public static final String HELP_MESSAGE=String.format("✨<b>Дотупные команды</b>✨\n\n"
+    public static final String HELP_MESSAGE = String.format("✨<b>Дотупные команды</b>✨\n\n"
 
                     + "<b>Начать\\закончить работу с ботом</b>\n"
                     + "%s - начать работу со мной\n"
@@ -20,6 +20,6 @@ public class HelpCommand implements Command{
 
     @Override
     public void execute(Update update) {
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(),HELP_MESSAGE);
+        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), HELP_MESSAGE);
     }
 }
