@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  jrtb-db:
+    image: mysql:8.1
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'dev_jrtb_db'
+      MYSQL_USER: 'postgres'
+      MYSQL_PASSWORD: 'postgres'
+      MYSQL_ROOT_PASSWORD: 'postgres'
+    ports:
+      - '3307:3306'
+    expose:
+      - '3306'
