@@ -27,15 +27,25 @@ public class GroupSubServiceImpl implements GroupSubService {
             Optional<TelegramUser> first = groupSub.getUsers().stream()
                     .filter(it -> it.getChatId().equalsIgnoreCase(chatId))
                     .findFirst();
-            if (first.isEmpty()){
+            if (first.isEmpty()) {
                 groupSub.addUser(telegramUser);
             }
         } else {
-            groupSub= new GroupSub();
+            groupSub = new GroupSub();
             groupSub.addUser(telegramUser);
             groupSub.setId(groupDiscussionInfo.getId());
             groupSub.setTitle(groupDiscussionInfo.getTitle());
         }
+        return groupSubRepository.save(groupSub);
+    }
+
+    @Override
+    public Optional<GroupSub> findById(Integer groupId) {
+        return groupSubRepository.findById(groupId);
+    }
+
+    @Override
+    public GroupSub save(GroupSub groupSub) {
         return groupSubRepository.save(groupSub);
     }
 }

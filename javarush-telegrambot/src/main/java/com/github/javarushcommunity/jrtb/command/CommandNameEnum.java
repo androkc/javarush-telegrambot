@@ -7,7 +7,8 @@ public enum CommandNameEnum {
     NO("no_command"),
     STAT("/stat"),
     ADD_GROUP_SUB("/add_group_sub"),
-    LIST_GROUP_SUB("/list_group_sub");
+    LIST_GROUP_SUB("/list_group_sub"),
+    DELETE_GROUP_SUB("/delete_group_sub");
 
 
     private final String commandName;
