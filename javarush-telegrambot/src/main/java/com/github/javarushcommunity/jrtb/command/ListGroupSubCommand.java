@@ -21,7 +21,7 @@ public class ListGroupSubCommand implements Command {
 
     @Override
     public void execute(Update update) {
-        TelegramUser telegramUser = telegramUserService.findByChatId(getChatId(update).toString())
+        TelegramUser telegramUser = telegramUserService.findByChatId(getChatId(update))
                 .orElseThrow(NotFoundException::new);
         List<GroupSub> groupSubs = telegramUser.getGroupSubs();
         String message;
@@ -31,7 +31,7 @@ public class ListGroupSubCommand implements Command {
             String collectGroups = telegramUser.getGroupSubs().stream()
                     .map(it -> "Группа: " + it.getTitle() + ", ID = " + it.getId() + " \n")
                     .collect(Collectors.joining());
-            message = String.format("Я нашел все подписки на группы: \n\n %s", collectGroups);
+            message = String.format("Я нашел все подписки на группы: \n\n%s", collectGroups);
         }
         sendBotMessageService.sendMessage(telegramUser.getChatId(), message);
     }

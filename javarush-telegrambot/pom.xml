@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.github.androkc</groupId>
     <artifactId>javarush-telegrambot</artifactId>
-    <version>0.8.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Javarush TelegramBot</name>
     <description>Telegram bot for Javarush from community to community</description>
     <properties>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>6.0.7</version>
+            <version>7.0.4</version>
         </dependency>
 
         <dependency>

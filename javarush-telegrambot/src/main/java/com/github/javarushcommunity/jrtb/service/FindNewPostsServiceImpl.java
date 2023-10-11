@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class FindNewArticleServiceImpl implements FindNewArticleService {
+public class FindNewPostsServiceImpl implements FindNewPostsService {
     public static final String JAVARUSH_WEB_POST_FORMAT = "https://javarush.com/groups/posts/%s";
 
     private final GroupSubService groupSubService;
@@ -21,17 +21,17 @@ public class FindNewArticleServiceImpl implements FindNewArticleService {
     private final SendBotMessageService sendMessageService;
 
     @Override
-    public void findNewArticles() {
+    public void findNewPosts() {
         groupSubService.findAll().forEach(groupSub -> {
-            List<PostInfo> newPosts = javaRushPostClient.findNewPosts(groupSub.getId(), groupSub.getLastArticleId());
+            List<PostInfo> newPosts = javaRushPostClient.findNewPosts(groupSub.getId(), groupSub.getLastPostId());
 
-            setNewLastArticleId(groupSub, newPosts);
+            setNewLastPostId(groupSub, newPosts);
 
-            notifySubscribersAboutNewArticles(groupSub, newPosts);
+            notifySubscribersAboutNewPosts(groupSub, newPosts);
         });
     }
 
-    private void notifySubscribersAboutNewArticles(GroupSub groupSub, List<PostInfo> newPosts) {
+    private void notifySubscribersAboutNewPosts(GroupSub groupSub, List<PostInfo> newPosts) {
         Collections.reverse(newPosts);
         List<String> messagesList = newPosts.stream()
                 .map(post -> String.format("✨Вышла новая статья <b>%s</b> в группе <b>%s</b>.✨\n\n" +
@@ -49,12 +49,12 @@ public class FindNewArticleServiceImpl implements FindNewArticleService {
         return String.format(JAVARUSH_WEB_POST_FORMAT,key);
     }
 
-    private void setNewLastArticleId(GroupSub groupSub, List<PostInfo> newPosts) {
+    private void setNewLastPostId(GroupSub groupSub, List<PostInfo> newPosts) {
         newPosts.stream()
                 .mapToInt(PostInfo::getId)
                 .max()
                 .ifPresent(id -> {
-                    groupSub.setLastArticleId(id);
+                    groupSub.setLastPostId(id);
                     groupSubService.save(groupSub);
                 });
     }

@@ -41,7 +41,7 @@ public class JavaRushPostClientImpl implements JavaRushPostClient {
             if (isNull(lastPostId)) {
                 Optional<GroupSub> byId = groupSubRepository.findById(groupId);
                 if (byId.isPresent()) {
-                    byId.get().setLastArticleId(e.getId());
+                    byId.get().setLastPostId(e.getId());
                     newPosts.add(e);
                 }
                 return newPosts;

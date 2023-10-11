@@ -15,8 +15,8 @@ public class GroupsCountRequestArgs {
     private final GroupInfoType groupInfoType;
     private final GroupFilter groupFilter;
 
-    public Map populateQueries() {
-        Map queries = new HashMap<>();
+    public Map<String, Object> populateQueries() {
+        Map<String, Object> queries = new HashMap<>();
         if (nonNull(query)) {
             queries.put("query", query);
         }

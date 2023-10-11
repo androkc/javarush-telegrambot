@@ -2,7 +2,6 @@ package com.github.javarushcommunity.jrtb.repository;
 
 import com.github.javarushcommunity.jrtb.repository.entity.GroupSub;
 import com.github.javarushcommunity.jrtb.repository.entity.TelegramUser;
-import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,7 @@ public class TelegramUserRepositoryIT {
     public void shouldProperlySaveTelegramUser() {
         TelegramUser telegramUser = new TelegramUser();
         telegramUser.setActive(false);
-        telegramUser.setChatId("12313123");
+        telegramUser.setChatId(12312313L);
         telegramUserRepository.save(telegramUser);
 
         Optional<TelegramUser> saved = telegramUserRepository.findById(telegramUser.getChatId());
@@ -44,10 +43,10 @@ public class TelegramUserRepositoryIT {
         Assertions.assertEquals(telegramUser, saved.get());
     }
 
-    @Sql(scripts = {"/sql/fiveGroupSubsForUser.sql"})
+    @Sql(scripts = {"/sql/clearDbs.sql","/sql/fiveGroupSubsForUser.sql"})
     @Test
     public void shouldProperlyGetAllGroupsSubsForUser() {
-        Optional<TelegramUser> userRepositoryById = telegramUserRepository.findById("1");
+        Optional<TelegramUser> userRepositoryById = telegramUserRepository.findById(1L);
 
         Assertions.assertTrue(userRepositoryById.isPresent());
 
@@ -55,7 +54,7 @@ public class TelegramUserRepositoryIT {
         for (int i = 0; i < groupSubs.size(); i++) {
             Assertions.assertEquals(String.format("g%s", i + 1), groupSubs.get(i).getTitle());
             Assertions.assertEquals(i + 1, groupSubs.get(i).getId());
-            Assertions.assertEquals(i + 1, groupSubs.get(i).getLastArticleId());
+            Assertions.assertEquals(i + 1, groupSubs.get(i).getLastPostId());
         }
     }
 }

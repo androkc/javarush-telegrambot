@@ -30,7 +30,7 @@ public class StatCommand implements Command {
                 .collect(Collectors.joining("\n"));
 
 
-        String chatId = update.getMessage().getChatId().toString();
+        Long chatId = update.getMessage().getChatId();
         sendBotMessageService.sendMessage(chatId, String.format(STAT_MESSAGE,
                 statisticDTO.getActiveUserCount(),
                 statisticDTO.getInactiveUserCount(),

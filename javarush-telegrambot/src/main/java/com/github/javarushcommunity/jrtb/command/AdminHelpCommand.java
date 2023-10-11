@@ -17,7 +17,7 @@ public class AdminHelpCommand implements Command {
 
     @Override
     public void execute(Update update) {
-        String chatId = update.getMessage().getChatId().toString();
+        Long chatId = update.getMessage().getChatId();
         sendBotMessageService.sendMessage(chatId, ADMIN_HELP_MESSAGE);
     }
 }

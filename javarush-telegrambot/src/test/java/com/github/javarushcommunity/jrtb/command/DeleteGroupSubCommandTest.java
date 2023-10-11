@@ -40,14 +40,14 @@ class DeleteGroupSubCommandTest {
 
         Update update = prepareUpdate(chatId, DELETE_GROUP_SUB.getCommandName());
 
-        Mockito.when(telegramUserService.findByChatId(String.valueOf(chatId)))
+        Mockito.when(telegramUserService.findByChatId(chatId))
                 .thenReturn(Optional.of(new TelegramUser()));
 
         String expected = "Пока нет подписок на группы. Чтобы добавить подписку напиши /add_group_sub";
 
         command.execute(update);
 
-        Mockito.verify(sendBotMessageService).sendMessage(chatId.toString(), expected);
+        Mockito.verify(sendBotMessageService).sendMessage(chatId, expected);
     }
 
     @Test
@@ -62,17 +62,17 @@ class DeleteGroupSubCommandTest {
         groupSub.setTitle("g1");
         telegramUser.setGroupSubs(Collections.singletonList(groupSub));
 
-        Mockito.when(telegramUserService.findByChatId(String.valueOf(chatId))).thenReturn(Optional.of(telegramUser));
+        Mockito.when(telegramUserService.findByChatId(chatId)).thenReturn(Optional.of(telegramUser));
 
-        String expected = "Чтобы удалить подписку на группу - передай комадну вместе с ID группы. \\n\" +\n" +
-                "                   \"Например: /delete_group_sub 16 \\n\\n\" +\n" +
-                "                   \"я подготовил список всех групп, на которые ты подписан) \\n\\n\" +\n" +
-                "                   \"имя группы - ID группы \\n\\n\" +\n" +
-                "                   \"g1 - 123 \n";
+        String expected = "Чтобы удалить подписку на группу - передай комадну вместе с ID группы. \n" +
+                "Например: /delete_group_sub 16 \n\n" +
+                "я подготовил список всех групп, на которые ты подписан) \n\n" +
+                "имя группы - ID группы \n\n" +
+                "g1 - 123 \n";
 
         command.execute(update);
 
-        Mockito.verify(sendBotMessageService).sendMessage(chatId.toString(), expected);
+        Mockito.verify(sendBotMessageService).sendMessage(chatId, expected);
     }
 
     @Test
@@ -86,14 +86,14 @@ class DeleteGroupSubCommandTest {
         groupSub.setTitle("g1");
         groupSub.setId(123);
         telegramUser.setGroupSubs(Collections.singletonList(groupSub));
-        Mockito.when(telegramUserService.findByChatId(String.valueOf(chatId))).thenReturn(Optional.of(telegramUser));
+        Mockito.when(telegramUserService.findByChatId(chatId)).thenReturn(Optional.of(telegramUser));
 
         String expected = "неправильный формат ID группы.\n " +
                 "ID должно быть целым положительным числом";
 
         command.execute(update);
 
-        Mockito.verify(sendBotMessageService).sendMessage(chatId.toString(), expected);
+        Mockito.verify(sendBotMessageService).sendMessage(chatId, expected);
 
     }
 
@@ -107,13 +107,13 @@ class DeleteGroupSubCommandTest {
         GroupSub groupSub = new GroupSub();
         groupSub.setId(groupId);
         groupSub.setTitle("g1");
-        telegramUser.setChatId(String.valueOf(chatId));
+        telegramUser.setChatId(chatId);
         telegramUser.setGroupSubs(Collections.singletonList(groupSub));
         ArrayList<TelegramUser> users = new ArrayList<>();
         users.add(telegramUser);
         groupSub.setUsers(users);
         Mockito.when(groupSubService.findById(groupId)).thenReturn(Optional.of(groupSub));
-        Mockito.when(telegramUserService.findByChatId(String.valueOf(chatId))).thenReturn(Optional.of(telegramUser));
+        Mockito.when(telegramUserService.findByChatId(chatId)).thenReturn(Optional.of(telegramUser));
 
         String expected = "Удалил подписку на группу: g1";
 
@@ -121,7 +121,7 @@ class DeleteGroupSubCommandTest {
 
         users.remove(telegramUser);
         Mockito.verify(groupSubService).save(groupSub);
-        Mockito.verify(sendBotMessageService).sendMessage(chatId.toString(), expected);
+        Mockito.verify(sendBotMessageService).sendMessage(chatId, expected);
     }
 
     @Test
@@ -136,6 +136,6 @@ class DeleteGroupSubCommandTest {
 
         command.execute(update);
 
-        Mockito.verify(sendBotMessageService).sendMessage(chatId.toString(), expected);
+        Mockito.verify(sendBotMessageService).sendMessage(chatId, expected);
     }
 }
