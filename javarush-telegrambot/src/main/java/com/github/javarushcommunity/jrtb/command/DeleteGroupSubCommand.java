@@ -32,7 +32,7 @@ public class DeleteGroupSubCommand implements Command {
     @Override
     public void execute(Update update) {
         if (getMessage(update).equalsIgnoreCase(DELETE_GROUP_SUB.getCommandName())) {
-            sendGroupIdList(getChatId(update).toString());
+            sendGroupIdList(getChatId(update));
             return;
         }
         String groupId = getMessage(update).split(SPACE)[1];
@@ -41,21 +41,20 @@ public class DeleteGroupSubCommand implements Command {
             Optional<GroupSub> byId = groupSubService.findById(Integer.valueOf(groupId));
             if (byId.isPresent()) {
                 GroupSub groupSub = byId.get();
-                TelegramUser telegramUser = telegramUserService.findByChatId(String.valueOf(chatId)).orElseThrow(NotFoundException::new);
+                TelegramUser telegramUser = telegramUserService.findByChatId(chatId).orElseThrow(NotFoundException::new);
                 groupSub.getUsers().remove(telegramUser);
                 groupSubService.save(groupSub);
-                sendBotMessageService.sendMessage(String.valueOf(chatId), format("Удалил подписку на группу: %s", groupSub.getTitle()));
-//                telegramUser.getGroupSubs().remove(groupSub);
+                sendBotMessageService.sendMessage(chatId, format("Удалил подписку на группу: %s", groupSub.getTitle()));
             } else {
-                sendBotMessageService.sendMessage(String.valueOf(chatId), "Не нашел такой группы =/");
+                sendBotMessageService.sendMessage(chatId, "Не нашел такой группы =/");
             }
         } else {
-            sendBotMessageService.sendMessage(String.valueOf(chatId), "неправильный формат ID группы.\n " +
+            sendBotMessageService.sendMessage(chatId, "неправильный формат ID группы.\n " +
                     "ID должно быть целым положительным числом");
         }
     }
 
-    private void sendGroupIdList(String chatId) {
+    private void sendGroupIdList(Long chatId) {
         String message;
         List<GroupSub> groupSubList = telegramUserService.findByChatId(chatId)
                 .orElseThrow(NotFoundException::new)
@@ -73,7 +72,6 @@ public class DeleteGroupSubCommand implements Command {
                     "имя группы - ID группы \n\n" +
                     "%s", userGroupSubData);
         }
-
 
         sendBotMessageService.sendMessage(chatId, format(message));
     }

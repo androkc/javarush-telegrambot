@@ -18,7 +18,7 @@ class GroupSubServiceTest {
     private GroupSubService groupSubService;
     private GroupSubRepository groupSubRepository;
     private TelegramUser telegramUser;
-    private final static String CHAT_ID = "1";
+    private final static Long CHAT_ID = 1L;
 
     @BeforeEach
     public void init() {
@@ -56,7 +56,7 @@ class GroupSubServiceTest {
         groupDiscussionInfo.setTitle("g1");
 
         TelegramUser oldTelegramUser = new TelegramUser();
-        oldTelegramUser.setChatId("2");
+        oldTelegramUser.setChatId(2L);
         oldTelegramUser.setActive(true);
 
         GroupSub groupSubFromDB = new GroupSub();

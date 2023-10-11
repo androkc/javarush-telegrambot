@@ -7,7 +7,6 @@ import com.github.javarushcommunity.jrtb.service.SendBotMessageService;
 import com.github.javarushcommunity.jrtb.service.StatisticService;
 import com.github.javarushcommunity.jrtb.service.TelegramUserService;
 import com.google.common.collect.ImmutableMap;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public class CommandContainer {
         unknownCommand = new UnknownCommand(sendBotMessageService);
     }
 
-    public Command retrieveCommand(String commandIdentifier, String username) {
+    public Command findCommand(String commandIdentifier, String username) {
         Command orDefault = commandImmutableMap.getOrDefault(commandIdentifier, unknownCommand);
         if (isAdminCommand(orDefault)) {
             if (admins.contains(username)) {

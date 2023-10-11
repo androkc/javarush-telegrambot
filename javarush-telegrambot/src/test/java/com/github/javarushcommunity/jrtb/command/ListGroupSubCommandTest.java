@@ -22,7 +22,7 @@ class ListGroupSubCommandTest {
     @Test
     public void shouldProperlyShowsListGroupSub() {
         TelegramUser telegramUser = new TelegramUser();
-        telegramUser.setChatId("1");
+        telegramUser.setChatId(1L);
         telegramUser.setActive(true);
 
         List<GroupSub> groupSubList = new ArrayList<>();
